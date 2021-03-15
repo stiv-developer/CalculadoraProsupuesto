@@ -1,0 +1,12 @@
+.transaction-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+.transaction-column .budget-items {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}

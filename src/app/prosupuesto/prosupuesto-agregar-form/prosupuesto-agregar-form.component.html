@@ -1,0 +1,17 @@
+<button pButton pRipple type="button" (click)="showBasicDialog()" icon="pi pi-plus" class="p-button-rounded" style="font-size: 2rem"></button>
+
+<p-dialog header="Form" [(visible)]="displayBasic">
+    <form #itemForm="ngForm" (ngSubmit)="onSubmit(itemForm)">
+
+        <div class="p-formgroup-inline">
+            <div class="p-field">
+                <p-inputNumber [ngModel]="item.amount" [showButtons]="true" name="amount" buttonLayout="horizontal" spinnerMode="horizontal" decrementButtonClass="p-button-danger" incrementButtonClass="p-button-success" incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus"
+                    placeholder="0"></p-inputNumber>
+            </div>
+            <div class="p-field">
+                <input [ngModel]="item.description" required id="lastname" type="text" name="description" pInputText placeholder="Descripcion">
+            </div>
+            <button pButton type="submit" label="Submit" [ngClass]="{ 'is-primary': isNewItem, 'is-success': !isNewItem }" [disabled]="!itemForm.valid"></button>
+        </div>
+    </form>
+</p-dialog>

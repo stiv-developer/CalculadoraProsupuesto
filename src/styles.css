@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    font-family: var(--font-family);
+    /* background: #f8f9fe; */
+    background: hsl(220, 16%, 96%);
+}
+
+.container {
+    padding: 0 30px;
+}
+
+@media screen and (min-width: 480px) {
+    .container {
+        max-width: 870px;
+        margin: auto;
+    }
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}

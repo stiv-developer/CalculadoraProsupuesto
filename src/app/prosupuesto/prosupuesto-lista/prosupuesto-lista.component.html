@@ -1,0 +1,9 @@
+<div class="transaction-column">
+    <div class="budget-items">
+        <div *ngFor="let item of budgetItems">
+            <app-prosupuesto-card *ngIf="item.amount >= 0" [item]="item" (xButtonClick)="onDeleteButtonClicked(item)" (cardClick)="onCardClicked(item)" style="display:block; margin-bottom: 20px"></app-prosupuesto-card>
+            <app-prosupuesto-card *ngIf="item.amount < 0" [item]="item" (xButtonClick)="onDeleteButtonClicked(item)" (cardClick)="onCardClicked(item)" style="display:block; margin-bottom: 20px"></app-prosupuesto-card>
+        </div>
+    </div>
+
+</div>
